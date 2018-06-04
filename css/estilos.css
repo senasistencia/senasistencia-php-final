@@ -1,0 +1,19 @@
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+}
+.login{
+  margin-top: 18%;
+}
+
+.logo-login{
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-top:-67px;
+  left: 35%;
+  right: 50%; 
+}
+
