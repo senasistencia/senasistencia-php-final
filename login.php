@@ -12,14 +12,14 @@
 		<link rel="stylesheet" href="css/estilos.css">
 	</head>
 
-	<body>
+	<body class="grey lighten-3">
 		<div class="container">
 			<div class="row">
-				<form action="" class="card col s12 m6 push-m3 login z-depth-1 grey lighten-4">
+				<form action="" class="card col s12 m8 push-m2 l6 push-l3 login z-depth-1 grey lighten-5">
 					<div class="section">
 						<img class="logo-login" src="imagenes/logo-login.png" alt="perra">
 					</div>
-					<div class="divider"></div>
+					<div class="divider col s12"></div>
 					<div class="section">	
 						<div class="row">
 							<input class="col s8 offset-s2 validate" type="number" placeholder="Numero de identificación" required="true">
