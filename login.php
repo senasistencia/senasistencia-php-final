@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['usuario'])){
+	header('Location: ')
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,7 +24,7 @@
 	<body class="grey lighten-3">
 		<div class="container">
 			<div class="row">
-				<form action="vistas/usuario/index.php" class="card col s12 m8 push-m2 l6 push-l3 login z-depth-1 grey lighten-5">
+				<form action="validacion.php" method="post" class="card col s12 m8 push-m2 l6 push-l3 login z-depth-1 grey lighten-5">
 					<div class="section">
 						<img class="logo-login" src="imagenes/logo-login.png" alt="perra">
 					</div>
