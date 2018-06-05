@@ -9,7 +9,7 @@ class Usuario{
   private $fechaInactivacion;//opcional
   #las siguientes variables corresponden
   #a llaves foraneas de la tabla
-  private $FK_docCliente//campo correspondiente al "usuario";
+  private $FK_docCliente;//campo correspondiente al "usuario"
  //metodos de ingreso y sustraccion de valores
   public function __SET($atributo,$valor)
   {
