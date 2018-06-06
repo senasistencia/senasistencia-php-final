@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(isset($_SESSION['usuario'])){
-	header('Location: ')
+	
+	header('Location: vistas/usuario/index.php');
 }
 
 ?>
@@ -31,8 +32,8 @@ if(isset($_SESSION['usuario'])){
 					<div class="divider col s12"></div>
 					<div class="section">	
 						<div class="row">
-							<input class="col s8 offset-s2 validate" type="number" placeholder="Numero de identificación" required="true">
-							<input class="col s8 offset-s2 validate" type="password" placeholder="Contraseña" required="true">
+							<input name="usuario" class="col s8 offset-s2 validate" type="number" placeholder="Numero de identificación" required="true">
+							<input name="password" class="col s8 offset-s2 validate" type="password" placeholder="Contraseña" required="true">
 							<button class="btn waves-effect waves-light col s4 offset-s4 z-depth-0 cyan darken-3" type="submit">Ingresar</button>
 						</div>						
 						<div class="divider"></div>
