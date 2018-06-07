@@ -1,11 +1,5 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.32-MariaDB)
-# Date: 2018-06-04 23:33:49
-# Generator: MySQL-Front 6.0  (Build 2.20)
+﻿# Structure for table "aprendiz";
 
-
-#
-# Structure for table "aprendiz"
-#
 
 DROP TABLE IF EXISTS `aprendiz`;
 CREATE TABLE `aprendiz` (
@@ -114,7 +108,7 @@ CREATE TABLE `cliente_rol` (
 # Data for table "cliente_rol"
 #
 
-INSERT INTO `cliente_rol` VALUES (1578425455,1);
+INSERT INTO `cliente_rol` VALUES (1578425455,1),(45785425,2);
 
 #
 # Structure for table "excusa"
@@ -215,7 +209,7 @@ CREATE TABLE `perfil` (
 # Data for table "perfil"
 #
 
-INSERT INTO `perfil` VALUES (1,'Administrador',1,'2018-04-29',NULL),(2,'Usuario',1,'2018-04-29',NULL);
+INSERT INTO `perfil` VALUES (1,'Psicologo',1,'2018-05-05',NULL),(2,'Coordinador',1,'2018-05-05',NULL),(3,'Instructor',1,'2018-05-05',NULL);
 
 #
 # Structure for table "programa_formacion"
@@ -279,7 +273,7 @@ CREATE TABLE `rol` (
 # Data for table "rol"
 #
 
-INSERT INTO `rol` VALUES (1,'Psicologo',1,'2018-05-05',NULL),(2,'Coordinador',1,'2018-05-05',NULL),(3,'Instructor',1,'2018-05-05',NULL);
+INSERT INTO `rol` VALUES (1,'Administrador',1,'2018-04-29',NULL),(2,'Usuario',1,'2018-04-29',NULL);
 
 #
 # Structure for table "tipo_de_documento"
@@ -307,7 +301,7 @@ INSERT INTO `tipo_de_documento` VALUES (1,'Cedula de Ciudadania',1,'2018-04-29',
 
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
-  `ID_Usuario` bigint(16) NOT NULL COMMENT 'Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del USUARIO.\n',
+  `ID_Usuario` bigint(16) NOT NULL AUTO_INCREMENT COMMENT 'Este ID se genera cada vez que se ingresa un registro nuevo referente a los datos del USUARIO.\n',
   `FK_DocCliente` bigint(16) NOT NULL COMMENT 'Documento del CLIENTE.',
   `Password_Hash` varchar(100) NOT NULL COMMENT 'Password que se asigna a la persona al momento del registro.',
   `Estado_Usuario` tinyint(1) NOT NULL COMMENT 'Indica si el registro esta Activo o Inactivo.',
@@ -315,10 +309,10 @@ CREATE TABLE `usuario` (
   `FechaDeInactivacion_Usuario` date DEFAULT NULL COMMENT 'Fecha de inactivacion del Usuario en el sistema',
   PRIMARY KEY (`ID_Usuario`),
   KEY `fk_usuarios_cliente1_idx` (`FK_DocCliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT AUTO_INCREMENT= 2 CHARSET=utf8;
 
 #
 # Data for table "usuario"
 #
 
-INSERT INTO `usuario` VALUES (0,1578425455,'5454548',1,'2018-05-04',NULL);
+INSERT INTO `usuario` VALUES (1,1578425455,'5454548',1,'2018-05-04',NULL);
